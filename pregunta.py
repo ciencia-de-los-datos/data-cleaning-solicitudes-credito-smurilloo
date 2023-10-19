@@ -19,7 +19,7 @@ def clean_data():
     df = df.apply(lambda x: x.astype(str).str.replace("_", "-").str.replace("-", " ").str.replace("$", "").str.replace(",", ""))
 
     # Convertir todas las columnas de texto a minusculas
-    df = df.apply(lambda x: x.astype(str).str.lower().str.strip())
+    df = df.apply(lambda x: x.str.lower().str.strip())
     
 
     # Limpiar columna fecha_de_beneficio
